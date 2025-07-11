@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:vpn_basic_project/view/screens/home_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,15 +14,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            "Hello World",
-            style: TextStyle(color: Colors.red),
-          ),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          elevation: 2,
         ),
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          elevation: 2,
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
     );
   }
 }

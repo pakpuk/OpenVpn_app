@@ -10,14 +10,14 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text(TextManager.appbartitle),
         leading: IconButton(
-          icon: const Icon(Icons.phone_android),
+          icon: const Icon(Icons.perm_device_info),
           onPressed: () {
             // Handle menu button press
           },
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.dark_mode),
+            icon: const Icon(Icons.brightness_2_outlined),
             onPressed: () {
               // Handle settings button press
             },
