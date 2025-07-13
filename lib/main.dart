@@ -29,6 +29,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
+      themeMode:
+          AppPreferences.getDarkMode() ? ThemeMode.dark : ThemeMode.light,
       home: const HomeScreen(),
     );
   }

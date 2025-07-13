@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorsManager {
-  static const Color maincolor = Color(0xFF1A237E); // Indigo 900
+  static const Color maincolor = Colors.redAccent; // Indigo 900
+  static const Color white70 = Colors.white70; // White 70
+  static const Color white12 = Colors.white12; // White 12
 }
