@@ -11,5 +11,5 @@ class AppPreferences {
     await boxofdate.put("isDarkMode", isDarkMode);
   }
 
-  static bool getDarkMode() => boxofdate.get("isDarkMode", defaultValue: false);
+  static bool get DarkMode => boxofdate.get("isDarkMode", defaultValue: false);
 }

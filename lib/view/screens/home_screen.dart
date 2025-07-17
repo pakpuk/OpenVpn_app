@@ -13,17 +13,16 @@ class HomeScreen extends StatelessWidget {
         title: const Text(TextManager.appbartitle),
         leading: IconButton(
           icon: const Icon(Icons.perm_device_info),
-          onPressed: () {
-            Get.changeThemeMode(
-              AppPreferences.getDarkMode() ? ThemeMode.light : ThemeMode.dark,
-            );
-          },
+          onPressed: () {},
         ),
         actions: [
           IconButton(
             icon: const Icon(Icons.brightness_2_outlined),
             onPressed: () {
-              // Handle settings button press
+              Get.changeThemeMode(
+                AppPreferences.DarkMode ? ThemeMode.light : ThemeMode.dark,
+              );
+              AppPreferences.DarkMode = !AppPreferences.DarkMode;
             },
           ),
         ],
