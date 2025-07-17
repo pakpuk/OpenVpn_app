@@ -7,4 +7,5 @@ class TextManager {
   static const String privacyPolicyTitle = "Privacy Policy";
   static const String termsOfServiceTitle = "Terms of Service";
   static const String errorMessage = "An error occurred. Please try again.";
+  static const String locationCountry = "Location/Country";
 }

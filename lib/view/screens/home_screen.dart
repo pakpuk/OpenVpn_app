@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vpn_basic_project/preferences/app_preferences.dart';
+import 'package:vpn_basic_project/theme/colors_manager.dart';
 import 'package:vpn_basic_project/theme/text_manger.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,9 +10,27 @@ class HomeScreen extends StatelessWidget {
   localBotttomNavigationBar(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(
-        color : AppPreferences.DarkMode ? ThemeData.
-            ,
+      height: 60,
+      child: Row(
+        children: [
+          Icon(
+            Icons.flag_circle_outlined,
+            color: ColorsManager.whiteColor,
+          ),
+          const SizedBox(width: 10),
+          Text(
+            TextManager.locationCountry,
+            style: TextStyle(
+              color: ColorsManager.whiteColor,
+              fontSize: 20,
+            ),
+          ),
+          SizedBox(width: 10),
+          Icon(
+            Icons.arrow_forward_ios,
+            color: ColorsManager.whiteColor,
+          ),
+        ],
       ),
     );
   }
