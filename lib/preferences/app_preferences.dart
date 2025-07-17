@@ -7,8 +7,8 @@ class AppPreferences {
     boxofdate = await Hive.openBox("data");
   }
 
-  Future<void> setDarkMode(bool isDarkMode) async {
-    await boxofdate.put("isDarkMode", isDarkMode);
+  static set DarkMode(bool isDarkMode) {
+    boxofdate.put("isDarkMode", isDarkMode);
   }
 
   static bool get DarkMode => boxofdate.get("isDarkMode", defaultValue: false);
