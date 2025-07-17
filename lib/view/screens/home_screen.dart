@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vpn_basic_project/preferences/app_preferences.dart';
 import 'package:vpn_basic_project/theme/text_manger.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,7 +13,8 @@ class HomeScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.perm_device_info),
           onPressed: () {
-            // Handle menu button press
+            AppPreferences.getDarkMode() ? ThemeData.light() : ThemeData.dark();
+            isDarkMode = !AppPreferences.getDarkMode();
           },
         ),
         actions: [
