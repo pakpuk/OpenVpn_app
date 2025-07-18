@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomCircleWidget(
-                    backgroundColor: ColorsManager.,
+                    backgroundColor: ColorsManager.greyColor,
                     title: TextManager.speed,
                     icon: Icons.download,
                     subtitle: TextManager.download),
