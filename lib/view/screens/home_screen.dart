@@ -8,29 +8,41 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   localBotttomNavigationBar(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: 60,
-      child: Row(
-        children: [
-          Icon(
-            Icons.flag_circle_outlined,
-            color: ColorsManager.whiteColor,
-          ),
-          const SizedBox(width: 10),
-          Text(
-            TextManager.locationCountry,
-            style: TextStyle(
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        color: ColorsManager.maincolor,
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        width: double.infinity,
+        height: 60,
+        child: Row(
+          children: [
+            Icon(
+              Icons.flag_circle_outlined,
               color: ColorsManager.whiteColor,
-              fontSize: 20,
+              size: 32,
             ),
-          ),
-          SizedBox(width: 10),
-          Icon(
-            Icons.arrow_forward_ios,
-            color: ColorsManager.whiteColor,
-          ),
-        ],
+            const SizedBox(width: 10),
+            Text(
+              TextManager.locationCountry,
+              style: TextStyle(
+                color: ColorsManager.whiteColor,
+                fontSize: 20,
+              ),
+            ),
+            Spacer(),
+            CircleAvatar(
+              backgroundColor: ColorsManager.whiteColor,
+              radius: 20,
+              child: Center(
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  color: ColorsManager.maincolor,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
