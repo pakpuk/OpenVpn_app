@@ -3,54 +3,16 @@ import 'package:get/get.dart';
 import 'package:vpn_basic_project/preferences/app_preferences.dart';
 import 'package:vpn_basic_project/theme/colors_manager.dart';
 import 'package:vpn_basic_project/theme/text_manger.dart';
+import 'package:vpn_basic_project/view/widgets/custom_circle%20_widget.dart';
+import 'package:vpn_basic_project/view/widgets/local_bottomNav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  localBotttomNavigationBar(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Container(
-        color: ColorsManager.maincolor,
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        width: double.infinity,
-        height: 60,
-        child: Row(
-          children: [
-            Icon(
-              Icons.flag_circle_outlined,
-              color: ColorsManager.whiteColor,
-              size: 32,
-            ),
-            const SizedBox(width: 10),
-            Text(
-              TextManager.locationCountry,
-              style: TextStyle(
-                color: ColorsManager.whiteColor,
-                fontSize: 20,
-              ),
-            ),
-            Spacer(),
-            CircleAvatar(
-              backgroundColor: ColorsManager.whiteColor,
-              radius: 20,
-              child: Center(
-                child: Icon(
-                  Icons.arrow_forward_ios,
-                  color: ColorsManager.maincolor,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: localBotttomNavigationBar(context),
+      bottomNavigationBar: localBotttomNavigationBar(),
       appBar: AppBar(
         title: const Text(TextManager.appbartitle),
         leading: IconButton(
@@ -68,6 +30,46 @@ class HomeScreen extends StatelessWidget {
             },
           ),
         ],
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomCircleWidget(
+                    backgroundColor: ColorsManager.orangeColor,
+                    title: TextManager.location,
+                    icon: Icons.flag_circle,
+                    subtitle: TextManager.free),
+                CustomCircleWidget(
+                    backgroundColor: ColorsManager.greenColor,
+                    title: TextManager.debit,
+                    icon: Icons.speed,
+                    subtitle: TextManager.pingtext),
+              ],
+            ),
+            SizedBox(
+              height: 22,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomCircleWidget(
+                    backgroundColor: ColorsManager.,
+                    title: TextManager.speed,
+                    icon: Icons.download,
+                    subtitle: TextManager.download),
+                CustomCircleWidget(
+                    backgroundColor: ColorsManager.bluecolor,
+                    title: TextManager.locationCountry,
+                    icon: Icons.upload,
+                    subtitle: TextManager.upload),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

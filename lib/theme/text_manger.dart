@@ -3,9 +3,13 @@ class TextManager {
   static const String connectButton = "Connect";
   static const String disconnectButton = "Disconnect";
   static const String settingsTitle = "Settings";
-  static const String aboutTitle = "About";
-  static const String privacyPolicyTitle = "Privacy Policy";
-  static const String termsOfServiceTitle = "Terms of Service";
   static const String errorMessage = "An error occurred. Please try again.";
   static const String locationCountry = "Location/Country";
+  static const String location = "Location";
+  static const String speed = "Speed";
+  static const String free = "Free";
+  static const String pingtext = "Ping";
+  static const String debit = "debit";
+  static const String download = "Download";
+  static const String upload = "Upload";
 }
