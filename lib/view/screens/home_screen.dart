@@ -34,9 +34,10 @@ class HomeScreen extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomCircleWidget(
                     backgroundColor: ColorsManager.orangeColor,
@@ -54,7 +55,7 @@ class HomeScreen extends StatelessWidget {
               height: 22,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomCircleWidget(
                     backgroundColor: ColorsManager.greyColor,
