@@ -12,9 +12,17 @@ class RoundVpnbutton extends StatelessWidget {
         child: CircleAvatar(
           radius: 42,
           backgroundColor: ColorsManager.redacclowop2,
-          child: CircleAvatar(
-            radius: 35,
-            backgroundColor: ColorsManager.maincolor,
+          child: InkWell(
+            onTap: () {},
+            child: CircleAvatar(
+              radius: 35,
+              backgroundColor: ColorsManager.maincolor,
+              child: Icon(
+                Icons.power_settings_new,
+                color: ColorsManager.whiteColor,
+                size: 30,
+              ),
+            ),
           ),
         ));
   }
