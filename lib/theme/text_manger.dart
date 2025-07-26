@@ -1,7 +1,7 @@
 class TextManager {
   static const String appbartitle = "Free VPN";
-  static const String connectButton = "Connect";
-  static const String disconnectButton = "Disconnect";
+  static const String connecttxt = "Connect";
+  static const String disconnecttxt = "Disconnect";
   static const String settingsTitle = "Settings";
   static const String errorMessage = "An error occurred. Please try again.";
   static const String locationCountry = "Location/Country";
