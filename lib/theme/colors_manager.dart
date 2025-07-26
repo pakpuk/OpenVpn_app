@@ -10,4 +10,6 @@ class ColorsManager {
   static const Color greenColor = Color.fromARGB(255, 8, 114, 12); // Green
   static const Color orangeColor = Colors.orange;
   static const Color greyColor = Colors.grey; // Orange
+  static const Color redacclowop2 = Color.fromARGB(255, 253, 106, 106);
+  static const Color redacclowop1 = Color.fromARGB(255, 253, 106, 106);
 }
