@@ -18,4 +18,17 @@ class VpnInfo {
     required this.ip,
     required this.hostname,
   });
+
+  factory VpnInfo.fromJson(Map<String, dynamic> json) {
+    return VpnInfo(
+      base64OpenvpnConfigData: json['base64OpenvpnConfigData'] ?? '',
+      vpnSession: json['vpnSession'] ?? 0,
+      countryShortName: json['countryShortName'] ?? '',
+      countryLongName: json['countryLongName'] ?? '',
+      speed: json['speed'] ?? 0,
+      ping: json['ping'] ?? 0,
+      ip: json['Ip'] ?? 0,
+      hostname: json['Hostname'] ?? '',
+    );
+  }
 }
