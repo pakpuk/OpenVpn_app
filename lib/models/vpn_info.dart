@@ -33,15 +33,16 @@ class VpnInfo {
   }
 
   Map<String, dynamic> toJson() {
-    return {
-      'Base64OpenvpnConfigData': base64OpenvpnConfigData,
-      'NumVpnSessions': vpnSession,
-      'CountryShortName': countryShortName,
-      'CountryLongName': countryLongName,
-      'Speed': speed,
-      'Ping': ping,
-      'Ip': ip,
-      'Hostname': hostname,
-    };
+    final jsonData = <String, dynamic>{};
+
+    jsonData['Base64OpenvpnConfigData'] = base64OpenvpnConfigData;
+    jsonData['NumVpnSessions'] = vpnSession;
+    jsonData['CountryShortName'] = countryShortName;
+    jsonData['CountryLongName'] = countryLongName;
+    jsonData['Speed'] = speed;
+    jsonData['Ping'] = ping;
+    jsonData['Ip'] = ip;
+    jsonData['Hostname'] = hostname;
+    return jsonData;
   }
 }
