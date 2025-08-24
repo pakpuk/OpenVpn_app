@@ -31,4 +31,7 @@ class AppPreferences {
     }
     return VpnServersList;
   }
+
+  static set VpnList(List<VpnInfo> VpnList) =>
+      boxofdate.put("vpnlist", jsonEncode(VpnList));
 }
