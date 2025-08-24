@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:hive_flutter/adapters.dart';
+import 'package:vpn_basic_project/models/vpn_info.dart';
 
 class AppPreferences {
   static late Box boxofdate;
@@ -12,4 +15,11 @@ class AppPreferences {
   }
 
   static bool get DarkMode => boxofdate.get("isDarkMode", defaultValue: false);
+
+//for saving  single selected vpn details
+  static VpnInfo get VpnInfoObject =>
+      VpnInfo.fromJson(boxofdate.get("vpn" ?? "{}"));
+
+  static set VpnInfoObject(VpnInfo value) =>
+      boxofdate.put("vpn", jsonEncode(value));
 }
