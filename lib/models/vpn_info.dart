@@ -21,14 +21,27 @@ class VpnInfo {
 
   factory VpnInfo.fromJson(Map<String, dynamic> json) {
     return VpnInfo(
-      base64OpenvpnConfigData: json['base64OpenvpnConfigData'] ?? '',
-      vpnSession: json['vpnSession'] ?? 0,
-      countryShortName: json['countryShortName'] ?? '',
-      countryLongName: json['countryLongName'] ?? '',
-      speed: json['speed'] ?? 0,
-      ping: json['ping'] ?? 0,
+      base64OpenvpnConfigData: json['Base64OpenvpnConfigData'] ?? '',
+      vpnSession: json['NumVpnSessions'] ?? 0,
+      countryShortName: json['CountryShortName'] ?? '',
+      countryLongName: json['CountryLongName'] ?? '',
+      speed: json['Speed'] ?? 0,
+      ping: json['Ping'] ?? 0,
       ip: json['Ip'] ?? 0,
       hostname: json['Hostname'] ?? '',
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'Base64OpenvpnConfigData': base64OpenvpnConfigData,
+      'NumVpnSessions': vpnSession,
+      'CountryShortName': countryShortName,
+      'CountryLongName': countryLongName,
+      'Speed': speed,
+      'Ping': ping,
+      'Ip': ip,
+      'Hostname': hostname,
+    };
   }
 }
