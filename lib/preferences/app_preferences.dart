@@ -22,4 +22,13 @@ class AppPreferences {
 
   static set VpnInfoObject(VpnInfo value) =>
       boxofdate.put("vpn", jsonEncode(value));
+  //for saving  all the selected vpn details
+  static List<VpnInfo> get VpnList {
+    List<VpnInfo> VpnServersList = [];
+    final datainfo = jsonDecode(boxofdate.get("vpnlist") ?? "[]");
+    for (var data in datainfo) {
+      VpnServersList.add(VpnInfo.fromJson(data));
+    }
+    return VpnServersList;
+  }
 }
